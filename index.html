@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel With Peace</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="styles.style.css">
+    <!-- daisyUi & tailwind link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+    <header class="max-w-[1170px] mx-auto">
+        <!-- daisy ui nav bar -->
+        <div class="navbar bg-base-100   mb-5 mx-auto">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Item 1</a></li>
+                  <li>
+                    <a>Parent</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost text-4xl font-bold">P-Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex ">
+              <ul class="menu menu-horizontal px-1">
+                <li class="text-xl" ><a>Home</a></li>
+                <li class="text-xl">
+                  
+                    <summary>About</summary>
+                    
+                  
+                </li>
+                <li class="text-xl"><a>Destination</a></li>
+                <li ><a class="text-xl">Search</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+                <button class="btn border-2 border-black text-xl  text-[#1DD100]">Bus
+                    <img src="images/bus-icon.png" alt="">
+                </button>
+            </div>
+          </div>
+        <!-- daisy ui nav bar -->
+        <div style="background-image: url('/images/banner.png')" class=" bg-center bg-cover h-80 m-4 lg:m-0 rounded-lg">
+            <div class="text-center  lg:pt-40 lg:space-y-10">
+                <h1 class=" text-2xl lg:text-4xl text-white font-extrabold lg:leading-[60px]">End-to-End Travel With <br>
+                <span class="text-[#1DD100]">P Paribahan</span></h1>
+                <p class="text-white leading-6 p-4 lg:p-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, optio <br> fugiat rem quiugiat rem quis tenetur eius</p>
+                <button class="btn btn-secondary text-xl bg-[#1DD100] border-none text-black">Buy Tickets</button>
+                
+
+                <div class=" flex flex-col lg:flex-row justify-center gap-2 lg:gap-10 lg:p-4 lg:p-0 lg:mt-[380px]">
+                    <!-- card 1 -->
+                    <div class="card card-side bg-base-100  border-4 border-b-[#1DD100] px-8">
+                        <figure><img src="images/people.png" alt="Movie"/></figure>
+                        <div class="my-4">
+                          <h2 class="card-title">500K +</h2>
+                          <p>Registered users</p>
+                        </div>
+                      </div>
+                    <!-- card 1 -->
+                    <!-- card 2 -->
+                    <div class="card card-side bg-base-100 border-4 border-b-[#1DD100] px-8">
+                        <figure><img src="images/ticket-cupon.png" alt="Movie"/></figure>
+                        <div class="my-4">
+                          <h2 class="card-title">500K +</h2>
+                          <p>Registered users</p>
+                        </div>
+                      </div>
+                    <!-- card 2 -->
+                    <!-- card 3 -->
+                    <div class="card card-side bg-base-100 border-4 border-b-[#1DD100] px-8">
+                        <figure><img src="images/stoppage.png" alt="Movie"/></figure>
+                        <div class="my-4">
+                          <h2 class="card-title">500K +</h2>
+                          <p>Registered users</p>
+                        </div>
+                      </div>
+                    <!-- card 3 -->
+
+                </div>
+
+            </div>
+          </div>
+    </header>
+    <main id="main"></main>
+    <footer id="footer"></footer>
+
+
+
+
+    <!-- JS LINK UP -->
+    <script src="script/function.js"></script>
+    <script src="script/utility.js"></script>
+    
+</body>
+</html>
