@@ -1,34 +1,21 @@
-<table class="ml-6">
-              <!-- head -->
-              <thead  class="border-b-2 border-dashed ">
-                <tr >
-                  <th class="pr-8" >Seat <span id="seat-number" class="border-2 bg-[#1DD100] px-1 rounded">0</span> </th>
-                  <th class="pr-8">Class</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody id="booking-table" class="ml-4 block">
-                <!-- row 1 -->
-                <!-- <tr>
-                  <td>C2</td>
-                  <td>Economy</td>
-                  <td>0</td>
-                </tr> -->
-               
+<div id="modal" class="text-center   absolute left-[1060px] top-[1800px] w-[280px] border-2 hidden bg-gray-100">
+  <div class=" mx-auto"><img class="max-w-[20px] " class="inline-block items-center" src="images/success.png" alt=""></div>
+  <h1 class="text-xl">SUCCESS!</h1>
+  <h1 class="text-[15px]">Thank you for booking our bus seats</h1>
+  <h1 class="text-[15px]">We are working hard to find the best service and deal for you</h1>
+  <h1 class="text-[15px]">Shortly you will find a confirmation in your mail</h1>
+  <button class="btn btn-primary text-white text-xl">Continue</button>
+</div>
 
-                
-                <!-- row 2 -->
-                
-                <!-- row 3 -->
-                
-                <!-- row 3 -->
-                <thead>
-                  <tr>
-                    <td>Total Price</td>
-                    <td></td>
-                    <td>BDT<span class="total-price">0</span></td>
-                  </tr>
-                </thead>
-
-              </tbody>
-            </table>
+<div id="simpleModal" class="modal hidden fixed z-0 left-0 top-0 w-full h-[100%] overflow-auto bg-[rgba(0,0,0,0.5)]">
+  <div class="modal-content bg-[#f4f4f4] my-[20%] mx-auto p-[20px] w-[70%] ">
+    <span class="closeBtn">&times;</span>
+    <div class=" mx-auto"><img class="max-w-[20px] " class="inline-block items-center" src="images/success.png" alt="">
+    </div>
+  <h1 class="text-xl">SUCCESS!</h1>
+  <h1 class="text-[15px]">Thank you for booking our bus seats</h1>
+  <h1 class="text-[15px]">We are working hard to find the best service and deal for you</h1>
+  <h1 class="text-[15px]">Shortly you will find a confirmation in your mail</h1>
+  <button class="btn btn-primary text-white text-xl">Continue</button>
+  </div>
+</div>

@@ -29,14 +29,12 @@ for(const seat of allSeats){
         seatCount = seatCount + 1;
         if(seatCount>4){
             alert('You can not select more than 4 seats at a time. Now write your info for booking confirmation');
-            document.querySelector('.active').classList.remove('active');
-            seat.classList.add('active')
-            return;
+           
+            return seatCount;
         
         }
         
-
-        // 3:TO TAKE THE SEAT INFO AND PASTE INTO SEAT INFO
+            // 3:TO TAKE THE SEAT INFO AND PASTE INTO SEAT INFO
         const seatName = e.target.innerText;
         
         const perSeatPrice = document.getElementById('ticket-price').innerText;
@@ -69,14 +67,19 @@ for(const seat of allSeats){
 
         setInnerTextValue('selected-seats',seatCount);
 
-        function showConfirmation() {
-            const nextButton = document.getElementById('next-btn');
-            hideElementById(nextButton);
-            const confirmMessage = document.getElementById('modal');
-            showElementById(confirmMessage);
+        // function showConfirmation() {
+        //     const nextButton = document.getElementById('next-btn');
+        //     hideElementById(nextButton);
+        //     const confirmMessage = document.getElementById('modal');
+        //     showElementById(confirmMessage);
             
             
-        };
+        // };
+            
+        
+        
+
+        
         
     });
 }

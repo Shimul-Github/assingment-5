@@ -37,7 +37,7 @@ function GrandTotalPrice(category) {
         setInnerTextValue('grand-total-price',convertedGrandTotalCost);
         const phoneNumber = document.getElementById('phone-number').innerText;
         if(phoneNumber.length < 11){
-            showConfirmation();
+            // showConfirmation();
 
         }
     };  
@@ -53,4 +53,11 @@ function showElementById(elementId) {
     const element = document.getElementById('elementId');
     element.classList.remove('hidden');
     
+}
+let modal = document.getElementById('modal');
+let getConfirmMessage = document.getElementById('next-btn');
+// let closeBtn = document.getElementById('closeBtn');
+getConfirmMessage.addEventListener('click',openModal);
+function openModal() {
+    modal.style.display = 'block';
 }
