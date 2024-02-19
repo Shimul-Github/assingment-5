@@ -7,12 +7,7 @@ function goToTicketSection() {
     const ticketPurchase = document.getElementById('ticket-purchase');
     ticketPurchase.scrollIntoView({behavior:'smooth'});
 };
-if()
-function showConfirmation() {
-    const modalDisplay = document.getElementById('modal');
-    modalDisplay.classList.remove('hidden');
-    
-};
+
 
 /**
  * paste this function to every seat and check console for message clicked
@@ -27,18 +22,25 @@ const allSeats = document.getElementsByClassName('seat');
 let seatCount = 0;
 
 for(const seat of allSeats){
-    // 1:Now we get the all single seat
-    // console.log(seat.innerText);
-   
-    //2: UPDATE THE SEAT COUNT NUMBER BY CLICK SEAT
     seat.addEventListener('click', function (e) {
+        console.log('click',e.value);
+        seat.style.backgroundColor = '#1DD100';
+        seat.style.color = 'white';
         seatCount = seatCount + 1;
+        if(seatCount>4){
+            alert('You can not select more than 4 seats at a time. Now write your info for booking confirmation');
+            document.querySelector('.active').classList.remove('active');
+            seat.classList.add('active')
+            return;
+        
+        }
+        
+
         // 3:TO TAKE THE SEAT INFO AND PASTE INTO SEAT INFO
         const seatName = e.target.innerText;
         
-        
         const perSeatPrice = document.getElementById('ticket-price').innerText;
-        console.log(perSeatPrice);
+        // console.log(perSeatPrice);
         const bookingTable = document.getElementById('booking-table');
         // console.log(bookingTable);
         const className = 'Economy';
@@ -62,32 +64,19 @@ for(const seat of allSeats){
 
 
         
-        const totalCost = document.getElementById('total-cost').innerText;
-        const convertedTotalCost = parseInt(totalCost);
-        document.getElementById('total-cost').innerText = convertedTotalCost + parseInt(perSeatPrice);
-        const grandTotalCost = document.getElementById('grand-total-price').innerText; 
-        const convertedGrandTotalCost = parseInt(grandTotalCost);
-        document.getElementById('grand-total-price').innerText = convertedGrandTotalCost + parseInt(perSeatPrice);
+        totalPrice('total-cost',parseInt(perSeatPrice));
+        GrandTotalPrice('grand-total-price',parseInt(perSeatPrice));
 
-        
         setInnerTextValue('selected-seats',seatCount);
 
-        
-        
-       
-        
-        
-        
-        
-
-
-       
-       
-
-    
-
-        
-        
+        function showConfirmation() {
+            const nextButton = document.getElementById('next-btn');
+            hideElementById(nextButton);
+            const confirmMessage = document.getElementById('modal');
+            showElementById(confirmMessage);
+            
+            
+        };
         
     });
 }
